@@ -4,7 +4,7 @@ const fs = require("fs");
 
 function compile(srcCodeFile, execFilePath) {
   return new Promise((resolve, reject) => {
-    const command = 'g++ "' + srcCodeFile + '" -o' + ' "' + execFilePath + '"';
+    const command = 'gcc "' + srcCodeFile + '" -o' + ' "' + execFilePath + '"';
 
     try {
       const output = execSync(command, { timeout: 30000 });
@@ -75,7 +75,7 @@ function runTestcases(testcases, testcaseIdx, execFile, inputFilePath) {
 function run(testcases, code, username) {
   return new Promise((resolve, reject) => {
     const fileName = username + "-" + new Date().getTime();
-    const srcCodeFilePath = path.join(__dirname, "temp", fileName + ".cpp");
+    const srcCodeFilePath = path.join(__dirname, "temp", fileName + ".c");
     const execFilePath = path.join(__dirname, "temp", fileName + ".exe");
     const inputFilePath = path.join(__dirname, "temp", fileName + ".txt");
 
