@@ -23,6 +23,8 @@ function loadQuestions() {
     questionList.empty();
     const questions = response.message.questions;
     
+    console.log(questions);
+
     for(let i = 0; i < questions.length; i++) {
       questionList.append(createCard(questions[i].title, questions[i]._id));
     }
