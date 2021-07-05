@@ -9,7 +9,7 @@ $(() => {
       url: LOGOUT_URL,
       method: 'GET'
     }).done((response) => {
-      window.location.href = 'http://localhost:7777/';
+      window.location.href = HOST_URL;
     });
 
   });

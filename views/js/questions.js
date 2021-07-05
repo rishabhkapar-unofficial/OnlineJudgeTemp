@@ -4,7 +4,7 @@ $(() => {
 
   $('#addquestion').click((e) => {
     e.preventDefault();
-    window.location.href = 'http://localhost:7777/addquestion';
+    window.location.href = HOST_URL + '/addquestion';
   })
 
 })
@@ -56,7 +56,7 @@ function createCard(title, id) {
 
   addTestcaseBtn.click((e) => {
     e.preventDefault();
-    window.location.href = 'http://localhost:7777/addtestcase/' + id;
+    window.location.href = HOST_URL + '/addtestcase/' + id;
   });
     
   card.append(titleField);

@@ -28,7 +28,7 @@ function createCard(title, id) {
   
   solveBtn.click((e) => {
     e.preventDefault();
-    window.location.href = 'http://localhost:7777/solve/' + id;
+    window.location.href = HOST_URL + '/solve/' + id;
   });
     
   card.append(titleField);

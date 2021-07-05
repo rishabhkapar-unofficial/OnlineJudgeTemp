@@ -13,7 +13,7 @@ $(() => {
       data: { username: usernameField.val(), password: passwordField.val() }
     }).done((response) => {
       if(response.success) {
-        window.location.href = 'http://localhost:7777/dashboard';
+        window.location.href = HOST_URL + '/dashboard';
       } else {
         alert(response.message);
       }
